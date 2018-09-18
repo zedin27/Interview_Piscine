@@ -1,0 +1,2 @@
+Time: O(n) where n is the number of the elements passed in the list
+Space: O(n)
