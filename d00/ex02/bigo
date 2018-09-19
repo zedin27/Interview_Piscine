@@ -1,0 +1,2 @@
+Time: O(logn) by having our array and splitting into two with our pivot
+Space: O(1)
