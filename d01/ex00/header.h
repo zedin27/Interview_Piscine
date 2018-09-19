@@ -26,5 +26,5 @@ char *precious(int *text, int size);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_node t_node;
 #endif
