@@ -36,13 +36,12 @@ void push(struct s_stack *stack, char *word);
 void printReverseV2(struct s_node *lst);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 struct s_node *createList(char **words, int n);
 
 /*--------------------------------
   &  your own other function
   --------------------------------*/
-
 
 #endif
