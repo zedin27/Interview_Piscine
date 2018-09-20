@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 # define HEADER_H
-
+# define ERR -1
 /*--------------------------------
   !! required structure
   --------------------------------*/

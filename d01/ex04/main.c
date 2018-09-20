@@ -11,7 +11,17 @@ int main(void)
 	/*-------------------
 	launch your test here
 	--------------------*/
-
+	struct s_queue *elem;
+	elem = queueInit();
+	printf("%d\n", isEmpty(elem));
+	enqueue(elem, "420");
+	enqueue(elem, "lit");
+	enqueue(elem, "360");
+	printf("%s\n", dequeue(elem));
+	// printf("%d\n", isEmpty(elem));
+	// printf("%s\n", peek(elem));
+	// printf("%s\n", dequeue(elem));
+	// printf("%d\n", isEmpty(elem));
 	return (0);
 }
 
@@ -19,4 +29,3 @@ int main(void)
 
 // Function used for the test
 // Don't go further :)
-
