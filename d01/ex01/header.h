@@ -15,7 +15,7 @@ struct s_node {
 void printReverse(struct s_node *lst);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 struct s_node *createList(char **words, int n);
 
@@ -23,5 +23,5 @@ struct s_node *createList(char **words, int n);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_node t_node;
 #endif

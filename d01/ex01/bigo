@@ -1,0 +1,2 @@
+Time: O(n) goes through the list where n is the word of the list
+Space: O(n) same as time
