@@ -1,10 +1,11 @@
 #include "header.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 //Implement circular doubly linked list
 
-t_node *head = NULL;
-
-t_node	init(char c)
+t_node	*init(char c)
 {
 	t_node *node;
 
@@ -15,41 +16,65 @@ t_node	init(char c)
 	return (node);
 }
 
-t_node insert_after(t_node **list, t_node *new_node)
+void	insert_after(t_node **list, t_node *new_node)
 {
+	t_node *head;
+
 	if (*list == NULL)
 		*list = new_node;
 	else
 	{
-		new_node->next = (*list)->prev->next;
-		new_node->prev = (*list)->prev;
-		(*list)->prev->next = new_node;
-		(*list)->prev = new_node;
+		for (head = *list; head->next; head = head->next)
+			 ;
+		head->next = new_node;
+		head->next->prev = head;
 	}
 }
 
-t_node iter_list(t_node *list)
+void print_list(t_node *list)
 {
-	int i;
-	int size;
+	t_node *head;
 
-	i = -1;
-	size = strlen(CS)
-	while (++i < size)
-		insert_after(&head, init(CS[i]));
-	return (head);
-}
-
-void printList(t_node *node)
-{
-	while (node != NULL)
+	head = list;
+	while (list)
 	{
-		printf(" %d ", node->data);
-		node = node->next;
+		printf("%c", list->c);
+		list = list->next;
+		if (head == list)
+			break ;
 	}
 }
 
-char *precious(int *text, int size)
+char		*precious(int *text, int size)
 {
+	int		i = 1;
+	char	*res;
+	t_node	*head, *tail;
 
+	res = malloc(sizeof(char) + (size + 1));
+	head = init(CS[0]);
+	for (i = 1; (size_t)i < strlen(CS); i++)
+			insert_after(&head, init(CS[i]));
+	for (tail = head; tail->next; tail = tail->next)
+		;
+	head->prev = tail;
+	tail->next = head;
+	i = 0;
+	while (i < size)
+	{
+		if (text[i] > 0)
+		{
+			while (text[i]-- > 0)
+				head = head->next;
+			res[i] = head->c;
+		}
+		else
+		{
+			while (text[i]++ < 0)
+				head = head->prev;
+			res[i] = head->c;
+		}
+		i++;
+	}
+	return (res);
 }
