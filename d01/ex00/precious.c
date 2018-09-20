@@ -1,8 +1,6 @@
 #include "header.h"
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
-
 //Implement circular doubly linked list
 
 t_node	*init(char c)
@@ -38,7 +36,6 @@ void print_list(t_node *list)
 	head = list;
 	while (list)
 	{
-		printf("%c", list->c);
 		list = list->next;
 		if (head == list)
 			break ;
@@ -47,10 +44,11 @@ void print_list(t_node *list)
 
 char		*precious(int *text, int size)
 {
-	int		i = 1;
+	int		i;
 	char	*res;
 	t_node	*head, *tail;
 
+	i = 1;
 	res = malloc(sizeof(char) + (size + 1));
 	head = init(CS[0]);
 	for (i = 1; (size_t)i < strlen(CS); i++)
