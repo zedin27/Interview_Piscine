@@ -1,2 +1,2 @@
 Time: O(1) is the element that is added to the queue
-Space: O(n)
+Space: O(n) where n you go through the queue and insert your new message

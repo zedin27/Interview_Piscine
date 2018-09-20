@@ -1,2 +1,2 @@
-Time: O(n)
-Space: O(n)
+Time: O(1) Where you pop the first element depending of the pointer from the last message
+Space: O(n) going through of each stack and filling out the message
