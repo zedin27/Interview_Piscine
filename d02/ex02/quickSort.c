@@ -1,5 +1,14 @@
 #include "header.h"
 
+int		size(t_player **players)
+{
+	int i = 0;
+
+	while (players[i])
+		i++;
+	return (i);
+}
+
 void	swap(t_player **a, t_player **b)
 {
 	t_player *tmp;
@@ -38,8 +47,5 @@ void	pre_quickSort(t_player **players, int lo, int hi)
 
 void	quickSort(t_player **players)
 {
-	int end;
-	for (end = 0; players[end]; end++)
-		;
-	pre_quickSort(players, 0, end - 1);
+	pre_quickSort(players, 0, size(players) - 1);
 }

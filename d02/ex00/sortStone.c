@@ -13,15 +13,11 @@ void	swap(t_stone **a, t_stone **b)
 
 void	bubble_sort(t_stone **stone, int size)
 {
-	t_stone *tmp;
+	// t_stone *tmp;
 	for (int i = 0; i < size; i++)
 		for (int j = 0; j < size - 1; j++)
 			if ((stone[i]->size) < (stone[j]->size))
-			{
-				tmp = stone[i];
-				stone[i] = stone[j];
-				stone[j] = tmp;
-			}
+				swap(&stone[i], &stone[j]);
 }
 
 int bucket(t_stone *stone, t_stone **arr)
