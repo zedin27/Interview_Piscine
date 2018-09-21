@@ -1,0 +1,2 @@
+Time: O(n^2) because the pivot can become the greatest or smallest element
+Space: O(log(n))

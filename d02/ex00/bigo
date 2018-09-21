@@ -1,2 +1,2 @@
-Time:
-Space:
+Time: O(n^2) using bucket sort to arrange all stones where n is the size of buckets from the stones list
+Space: O(n) where n is the size of buckets
