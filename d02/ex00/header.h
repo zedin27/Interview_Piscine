@@ -30,4 +30,5 @@ void exitWithMsg(char *msg);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_stone t_stone;
 #endif
