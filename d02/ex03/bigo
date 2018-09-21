@@ -1,0 +1,2 @@
+Time: O(nlog(n)) where n is the size of the list (divide and conquer)
+Space: O(n)
