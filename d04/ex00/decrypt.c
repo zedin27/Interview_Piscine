@@ -1,4 +1,5 @@
 #include "header.h"
+#include <string.h>
 #include <stdlib.h>
 
 int		toInt(char *bits)
@@ -30,6 +31,25 @@ char	*getSum(char *a, char *b)
 		c += num_a + num_b;
 		res[i] += (c % 2) + '0';
 		c /= 2;
+	}
+	return (res);
+}
+
+char	*getSum(char *a, char *b)
+{
+	char *res = calloc(7, sizeof(*res));
+	int num_a;
+	int num_b;
+	int c = 0;
+
+	res[6] = '\0';
+	for (int i = 5; i >= 0; i--)
+	{
+		num_a = (a[i] == '1') ? 1 : 0;
+		num_b = (b[i] == '1') ? 1 : 0;
+		c = (((num_a ^ num_b)) ^ c) + '0';
+		res[i] += (c % 2) + '0';
+		c = ((num_a & num_b) | (num_b & c)) | (num_a & c);
 	}
 	return (res);
 }
