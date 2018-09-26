@@ -5,15 +5,6 @@
 
 char	*one_twos_complement(char *binary)
 {
-	// int len = strlen(binary);
-	// int i = 0;
-	// char *ones, *twos;
-	// ones = twos = "";
-
-	// for (i = 0; i < len; i++)
-	// 	ones += FLIP(binary[i]);
-
-	// twos = *ones;
 
 	for (int i = 5; i >= 0; i--)
 	{
@@ -24,20 +15,6 @@ char	*one_twos_complement(char *binary)
 			binary[i] = '0';
 	}
 	return (binary);
-	// for (i = len - 1; i >= 0; i--)
-	// {
-	// 	if (ones[i] == '1')
-	// 		twos[i] = '0';
-	// 	else
-	// 	{
-	// 		twos[i] = '1';
-	// 		break ;
-	// 	}
-	// }
-	// if (i == -1)
-	// 	twos = '1' + twos;
-	// printf("ones: %s\n", ones);
-	// printf("twos: %s\n", twos);
 }
 
 char		*rightShift(char *bin, int k)
@@ -89,32 +66,3 @@ int			toInt(char *bits)
 	}
 	return (ret * sign);
 }
-
-// int		toInt(char *bits)
-// {
-// 	char *tmp
-// 	int decimal = 0;
-// 	int base = 1;
-// 	int neg = 1;
-// 	int len = strlen(bits);
-//
-// 	for (int i = len-1; i >= 0; i--)
-// 	{
-// 		if (bits[i] == '1')
-// 			decimal += base;
-// 		if (bits[0] == '-')
-// 			decimal *= neg_base;
-// 		base *= 2;
-// 	}
-// 	return (decimal);
-// }
-//
-// char	*shiftRight(char *bin, int k)
-// {
-//
-// }
-//
-// char	*shiftLeft(char *bin, int k)
-// {
-//
-// }

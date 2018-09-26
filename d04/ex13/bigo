@@ -1,0 +1,2 @@
+Time: O(n) which n is the number of bits
+Space: O(1)
