@@ -16,7 +16,7 @@ struct s_prices
 double bestPrice(int pizzaSize, double *prices);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 
 // PARSING
@@ -27,5 +27,5 @@ struct s_prices *readList();
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_prices t_prices;
 #endif
