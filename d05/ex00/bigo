@@ -1,0 +1,2 @@
+Time: O(n!) because we are getting all possible slices in each combination, where n are the comboinations
+Space: O(1)

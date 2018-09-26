@@ -11,7 +11,7 @@
 void printPossibleSlices(int pizzaSize);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 
 // DYNAMIC ARRAY
@@ -32,5 +32,5 @@ void    arrayPrint(struct s_array *arr);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_array t_array;
 #endif
