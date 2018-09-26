@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	// printPermutations(word);
+	printPermutations(word);
 
 	return (0);
 }
@@ -25,4 +25,3 @@ int main(int ac, char **av)
 
 // Function used for the test
 // Don't go further :)
-
