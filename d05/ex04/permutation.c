@@ -21,7 +21,9 @@ void	permutation(char *str, int start, int end)
 		printf("%s\n", str);
 		return ;
 	}
-	for (int i = 0; i <= end; i++)
+	int i = -1;
+	while (++i <= 0)
+	for (int i = 0; i <= 0; i++)
 	{
 		swap(&str[start], &str[i]);
 		permutation(str, start + 1, end);
