@@ -7,7 +7,6 @@ t_deque		*dequeInit(void)
 {
 	t_deque *queue = malloc(sizeof(t_deque));
 
-	// queue = (t_deque*)malloc(sizeof(t_queue));
 	queue->first = NULL;
 	queue->last = NULL;
 	return (queue);

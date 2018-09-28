@@ -18,7 +18,7 @@ struct s_node *createBST(int *arr, int n);
 
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 void printBinaryTree(struct s_node * t); //print a binary tree
 
@@ -27,5 +27,5 @@ void printBinaryTree(struct s_node * t); //print a binary tree
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_node t_node;
 #endif

@@ -20,8 +20,8 @@ int main(void)
 	launch your test here
 	--------------------*/
 
-	// root = createBST(arr, len);
-	// printBinaryTree(root);
+	root = createBST(arr, len);
+	printBinaryTree(root);
 
 	return (0);
 }

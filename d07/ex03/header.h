@@ -33,7 +33,7 @@ struct s_sellers *closestSellers(struct s_graph *graph, char *youAreHere);
 
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 
 //QUEUE
@@ -65,5 +65,7 @@ void printSellers(struct s_sellers *sellers);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_node t_node;
+typedef struct s_sellers t_sellers;
+typedef struct s_graph t_graph;
 #endif
