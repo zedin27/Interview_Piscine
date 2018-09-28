@@ -37,7 +37,7 @@ int popBack(struct s_deque *deque);
 struct s_max *maxSlidingWindow(int *arr, int n, int k);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 
 
@@ -45,5 +45,7 @@ struct s_max *maxSlidingWindow(int *arr, int n, int k);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_deque t_deque;
+typedef struct s_dequeNode t_dequeNode;
+typedef struct s_max t_max;
 #endif
