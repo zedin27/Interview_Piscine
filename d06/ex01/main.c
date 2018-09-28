@@ -22,8 +22,8 @@ int main(int ac, char **av)
 	launch your test here
 	--------------------*/
 
-	// count = selectHotspots(hotspots);
-	// printf("Number of hotspots : %d\n", count);
+	count = selectHotspots(hotspots);
+	printf("Number of hotspots : %d\n", count);
 
 	return (0);
 }
@@ -119,7 +119,7 @@ struct s_hotspot **readHotspots(char *filename)
 
         dprintf(STDOUT_FILENO, "(INFO) Loading the file... ");
         if (NULL == (file = readFile(filename)))
-                readList_leave();    
+                readList_leave();
         splitted = split(file, "\n");
         for (len = 0; splitted[len]; len++)
 		;
