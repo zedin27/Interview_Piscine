@@ -15,7 +15,7 @@ struct s_art {
 void heapSort(struct s_art **masterpiece, int n);
 
 /*--------------------------------
-  ?? test function used in main 
+  ?? test function used in main
   --------------------------------*/
 struct s_art **getArts(void);
 
@@ -23,5 +23,5 @@ struct s_art **getArts(void);
   &  your own other function
   --------------------------------*/
 
-
+typedef struct s_art t_art;
 #endif
