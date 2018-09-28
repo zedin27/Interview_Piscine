@@ -4,7 +4,22 @@
 
 t_sellers *closestSellers(t_graph *parisPlaces, char *youAreHere)
 {
-	struct s_node *start = NULL;
+	int count;
+	int dist;
+	t_node *start;
+	t_node *temp;
+	t_queue *queue;
+	t_queue *bars;
+	t_sellers *sellers;
+
+	count = 0;
+	dist = 0;
+	start = NULL;
+	queue = queueInit();
+	bars = queueInit();
+	sellers = malloc(sizeof(t_sellers));
+	sellers->distance = dist;
+	sellers->placeNames = malloc(sizeof(char *) * count + 1);
 	for (int i = 0; parisPlaces->places[i]; i++)
 	{
 		if (strcmp(youAreHere, parisPlaces->places[i]->name) == 0)
@@ -14,17 +29,12 @@ t_sellers *closestSellers(t_graph *parisPlaces, char *youAreHere)
 		}
 	}
 	if (!start)
-		return NULL;
-	int dist = 0;
-	int count = 0;
-	struct s_node *temp;
-	struct s_queue *q = queueInit();
-	struct s_queue *bars = queueInit();
-	enqueue(q, start);
-	enqueue(q, NULL);
-	while (q->first)
+		return (NULL);
+	enqueue(queue, start);
+	enqueue(queue, NULL);
+	while (queue->first)
 	{
-		while ((temp = dequeue(q)))
+		while ((temp = dequeue(queue)))
 		{
 			temp->visited = 1;
 			if (temp->hasCerealBar)
@@ -38,18 +48,15 @@ t_sellers *closestSellers(t_graph *parisPlaces, char *youAreHere)
 					if (temp->connectedPlaces[j]->visited != 1)
 					{
 						temp->connectedPlaces[j]->visited = 1;
-						enqueue(q, temp->connectedPlaces[j]);
+						enqueue(queue, temp->connectedPlaces[j]);
 					}
 			}
 		}
-		enqueue(q, NULL);
+		enqueue(queue, NULL);
 		if (count)
-			break;
+			break ;
 		dist++;
 	}
-	t_sellers *sellers = malloc(sizeof(t_sellers));
-	sellers->distance = dist;
-	sellers->placeNames = malloc(sizeof(char *) * count + 1);
 	for (int i = 0; i < count; i++)
 		sellers->placeNames[i] = dequeue(bars)->name;
 	sellers->placeNames[count] = NULL;

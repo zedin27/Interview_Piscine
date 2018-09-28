@@ -68,4 +68,5 @@ void printSellers(struct s_sellers *sellers);
 typedef struct s_node t_node;
 typedef struct s_sellers t_sellers;
 typedef struct s_graph t_graph;
+typedef struct s_queue t_queue;
 #endif
